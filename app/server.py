@@ -3,6 +3,7 @@ from fastapi.responses import RedirectResponse
 from langserve import add_routes
 from pirate_speak.chain import chain as pirate_speak_chain
 from app.chain import chain as catlist
+from app.ragchain import chain as ragchain
 
 app = FastAPI()
 
@@ -18,7 +19,7 @@ add_routes(app, pirate_speak_chain, path="/pirate-speak")
 
 
 add_routes(app, catlist, path="/catlist")
-
+add_routes(app, ragchain, path="/ragtest")
 
 if __name__ == "__main__":
     import uvicorn
