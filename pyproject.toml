@@ -14,6 +14,9 @@ uvicorn = "^0.23.2"
 langserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "<2"
 pirate-speak = {path = "packages/pirate-speak", develop = true}
+langchain-openai = ">=0.0.7"
+docarray = "^0.40.0"
+tiktoken = "^0.6.0"
 
 
 [tool.poetry.group.dev.dependencies]
